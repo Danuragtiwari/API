@@ -1,8 +1,12 @@
-# app_name/urls.py
+# companies/urls.py
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import CompanyViewSet,search_company
 
-from django.urls import path
-from . import views
+router = DefaultRouter()
+router.register(r'companies', CompanyViewSet)
 
 urlpatterns = [
-    path('', views.search_company, name='search_company'),
+    path('', include(router.urls)),
+    path('search/', search_company, name='search-company'),
 ]

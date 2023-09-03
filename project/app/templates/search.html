@@ -3,14 +3,133 @@
 
 <head>
     <title>Company Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-container {
+            text-align: center;
+        }
+        
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #companyDetails {
+            margin-top: 20px;
+        }
+        
+        h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        p {
+            margin: 0;
+        }
+        
+        hr {
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        
+        .error-message {
+            color: #ff0000;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Search for a Company</h1>
-    <form method="post">
-        {% csrf_token %} {{ form.as_p }}
-        <button type="submit">Search</button>
-    </form>
+    <div class="container">
+        <h1>Company Search</h1>
+        <div class="search-container">
+            <input type="text" id="companyNameInput" placeholder="Enter Company Name" value="">
+            <button onclick="searchCompany()">Search</button>
+        </div>
+        <div id="companyDetails"></div>
+        <div class="error-message" id="errorMessage"></div>
+    </div>
+
+    <script>
+        function searchCompany() {
+
+            const companyName = document.getElementById('companyNameInput').value.toUpperCase().trim();
+
+            const url = `/companies/?search=${encodeURIComponent(companyName)}`;
+
+            // Clear previous results and error message
+            document.getElementById('companyDetails').innerHTML = '';
+            document.getElementById('errorMessage').textContent = '';
+
+            if (companyName === '') {
+                document.getElementById('errorMessage').textContent = 'Please enter a company name.';
+                return;
+            }
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const detailsContainer = document.getElementById('companyDetails');
+
+                    if (data.length === 0) {
+                        detailsContainer.innerHTML = 'Company not found.';
+                    } else {
+                        data.forEach(company => {
+                            detailsContainer.innerHTML += `
+                                <h2>${company.name}</h2>
+                                <p>Headquarters: ${company.headquarters}</p>
+                                <p>Followers: ${company.followers}</p>
+                                <p>Location: ${company.location}</p>
+                                <hr>
+                            `;
+                        });
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('errorMessage').textContent = 'An error occurred while fetching data.';
+                    console.error('Error:', error);
+                });
+        }
+    </script>
 </body>
 
 </html>

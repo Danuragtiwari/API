@@ -1,8 +1,8 @@
-
+# companies/serializers.py
 from rest_framework import serializers
-from .models import CompanyReview
+from .models import Company
 
-class CompanyReviewSerializer(serializers.ModelSerializer):
+class CompanySerializer(serializers.ModelSerializer):
     class Meta:
-        model = CompanyReview
+        model = Company
         fields = '__all__'

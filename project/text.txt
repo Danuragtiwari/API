@@ -1,0 +1,45 @@
+Amazon | Seattle, WA | 149M | United States
+Google | Mountain View, CA | 95M | United States
+Microsoft | Redmond, WA | 82M | United States
+Apple | Cupertino, CA | 80M | United States
+Meta | Menlo Park, CA | 73M | United States
+IBM | Armonk, NY | 68M | United States
+Johnson & Johnson | New Brunswick, NJ | 65M | United States
+EY | London, England | 63M | United Kingdom
+Infosys | Bengaluru, India | 61M | India
+Wipro | Bengaluru, India | 59M | India
+PepsiCo | Purchase, NY | 57M | United States
+Walmart | Bentonville, AR | 54M | United States
+Accenture | Dublin, Ireland | 52M | Ireland
+JPMorgan Chase | New York, NY | 51M | United States
+Bank of America | Charlotte, NC | 50M | United States
+Cisco Systems | San Jose, CA | 49M | United States
+Oracle | Redwood Shores, CA | 48M | United States
+Berkshire Hathaway | Omaha, NE | 47M | United States
+Tesla | Austin, TX | 46M | United States
+UnitedHealth Group | Minnetonka, MN | 45M | United States
+Walgreens Boots Alliance | Deerfield, IL | 44M | United States
+Intel | Santa Clara, CA | 43M | United States
+Samsung | Seoul, South Korea | 42M | South Korea
+Procter & Gamble | Cincinnati, OH | 41M | United States
+Disney | Burbank, CA | 40M | United States
+Netflix | Los Gatos, CA | 39M | United States
+Salesforce | San Francisco, CA | 38M | United States
+Mastercard | Purchase, NY | 37M | United States
+Visa | San Francisco, CA | 36M | United States
+Goldman Sachs | New York, NY | 35M | United States
+Pfizer | New York, NY | 34M | United States
+Toyota | Toyota City, Japan | 33M | Japan
+Nestlé | Vevey, Switzerland | 32M | Switzerland
+Volkswagen | Wolfsburg, Germany | 31M | Germany
+ExxonMobil | Irving, TX | 30M | United States
+Caterpillar | Peoria, IL | 29M | United States
+United Technologies | Farmington, CT | 28M | United States
+Siemens | Munich, Germany | 27M | Germany
+Dell Technologies | Round Rock, TX | 26M | United States
+Huawei | Shenzhen, China | 25M | China
+HP | Palo Alto, CA | 24M | United States
+Adobe | San Jose, CA | 23M | United States
+Oracle | Redwood Shores, CA | 22M | United States
+Tesla | Austin, TX | 21M | United States
+UnitedHealth Group | Minnetonka, MN | 20M | United States
